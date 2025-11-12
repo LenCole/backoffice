@@ -1,0 +1,16 @@
+{
+  "extends": "@workspace/typescript-config/base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "rootDir": "src",
+    "outDir": "dist",
+    "declarationDir": "dist",
+    "paths": {
+      "@workspace/auth": ["./src/index.ts"],
+      "@workspace/auth/*": ["./src/*"]
+    },
+    "strictNullChecks": true
+  },
+  "include": ["src", "*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@workspace/db",
+  "type": "module",
+  "exports": {
+    "./main-db": {
+      "types": "./dist/main-db/index.d.ts",
+      "default": "./dist/main-db/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "db:push": "drizzle-kit push --config=src/main-db/drizzle.config.ts",
+    "db:studio": "drizzle-kit studio --config=src/main-db/drizzle.config.ts",
+    "db:generate": "drizzle-kit generate --config=src/main-db/drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config=src/main-db/drizzle.config.ts"
+  },
+  "dependencies": {
+    "@workspace/env": "workspace:*",
+    "@neondatabase/serverless": "1.0.2",
+    "drizzle-orm": "^0.44.7",
+    "drizzle-zod": "^0.8.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.6",
+    "drizzle-kit": "^0.31.6",
+    "typescript": "5.7.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "@workspace/typescript-config/base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "declarationDir": "dist",
+    "paths": {
+      "@workspace/db/*": ["./src/*"]
+    },
+    "strictNullChecks": true
+  },
+  "include": ["src", "*.ts"],
+  "exclude": ["node_modules", "dist", "drizzle.config.*.ts"]
+}

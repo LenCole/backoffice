@@ -7,24 +7,24 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@workspace/auth": "workspace:*",
+    "@workspace/db": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "lucide-react": "^0.475.0",
-    "next": "^15.4.5",
+    "@workspace/env": "workspace:*",
+    "lucide-react": "^0.553.0",
+    "next": "^16.0.1",
     "next-themes": "^0.4.6",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.19.9",
-    "@types/react": "^19.1.9",
-    "@types/react-dom": "^19.1.7",
-    "@workspace/eslint-config": "workspace:^",
+    "@types/node": "^20.19.24",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
     "@workspace/typescript-config": "workspace:*",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }

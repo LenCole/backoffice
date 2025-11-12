@@ -1,0 +1,15 @@
+{
+  "name": "@workspace/env",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types.d.ts",
+      "default": "./env.mjs"
+    }
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "zod": "^4.1.12",
+    "dotenv": "^17.2.3"
+  }
+}
