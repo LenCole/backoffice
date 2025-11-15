@@ -7,5 +7,16 @@
         "noNamespaceImport": "off"
       }
     }
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!!**/dist",
+      "!**/build",
+      "!**/.next",
+      "!**/.turbo",
+      "!**/packages/ui/src/components"
+    ]
   }
 }

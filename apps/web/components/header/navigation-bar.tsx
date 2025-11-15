@@ -9,12 +9,12 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@workspace/ui/components/navigation-menu";
+import { useIsMobile } from "@workspace/ui/hooks/use-mobile";
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 import Link from "next/link";
 import type * as React from "react";
 import { useEffect, useState } from "react";
 import { components } from "@/data/navigation-bar-data";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 export function NavigationBar() {
   const [hasMounted, setHasMounted] = useState(false);
