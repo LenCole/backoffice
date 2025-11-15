@@ -57,6 +57,7 @@ const nextConfig = {
   ],
   // biome-ignore lint/suspicious/useAwait: false positive
   async headers() {
+    const isDev = process.env.NODE_ENV === "development";
     return [
       {
         source: "/(.*)",
@@ -70,7 +71,7 @@ const nextConfig = {
               "img-src 'self' data: https://*.googleusercontent.com https://accounts.google.com",
               "connect-src 'self' https://accounts.google.com https://play.google.com https://apis.google.com",
               "frame-src 'self' https://accounts.google.com",
-              "font-src 'self data:",
+              `font-src 'self' data: ${isDev ? "http://localhost:3001" : ""}`,
             ].join("; "),
           },
         ],

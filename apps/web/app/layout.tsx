@@ -1,7 +1,8 @@
 import { env } from "@workspace/env";
-import { Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 
-import "@workspace/ui/globals.css";
+import "@workspace/ui/styles/web.css";
+import { Header } from "@/components/header/header";
 import { Providers } from "@/components/providers";
 
 const fontSans = Inter({
@@ -9,14 +10,14 @@ const fontSans = Inter({
   variable: "--font-sans",
 });
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-});
+// const fontMono = Geist_Mono({
+//   subsets: ["latin"],
+//   variable: "--font-mono",
+// });
 
 // todo: edit metadata
 export const metadata = {
-  metadataBase: new URL(env.NEXT_PUBLIC_),
+  metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
   title: "BackOffice",
   description: "Canadian Made",
 };
@@ -28,9 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
-      >
+      <body className={`${fontSans.variable} font-sans antialiased`}>
+        <Header />
         <Providers>{children}</Providers>
       </body>
     </html>
