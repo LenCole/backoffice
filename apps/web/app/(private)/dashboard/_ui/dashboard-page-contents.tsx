@@ -1,18 +1,15 @@
 "use client";
 
+import type { Session } from "@workspace/auth";
 import { createAuthClient } from "@workspace/auth/client";
+import { Button } from "@workspace/ui/components/button";
 import { useRouter } from "next/navigation";
-
-type DashboardPageContentsProps = {
-  user: {
-    email?: string | null;
-    name?: string | null;
-  };
-};
 
 export default function DashboardPageContents({
   user,
-}: DashboardPageContentsProps) {
+}: {
+  user: Session["user"];
+}) {
   const authClient = createAuthClient();
   const router = useRouter();
 
@@ -25,13 +22,14 @@ export default function DashboardPageContents({
     <div>
       <p>Dashboard</p>
       <p>Welcome, {user.name || user.email}</p>
-      <button
+      <Button
         className="hover-text-accent-foreground inline-flex h-10 items-center justify-center whitespace-nowrap rounded-md border border-input bg-background px-4 py-2 font-medium text-sm ring-offset-background transition-colors hover:bg-accent focus-visible::outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
         onClick={handleSignOut}
         type="button"
+        variant="default"
       >
         Sign Out
-      </button>
+      </Button>
     </div>
   );
 }
