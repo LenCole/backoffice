@@ -16,7 +16,8 @@ export default function TermsOfUse() {
         Terms of Use
       </h1>
       <p className="mb-6 text-center text-lg text-primary md:text-left">
-        Allowable usage of the Cole CPA Group website
+        Allowable usage of the{" "}
+        {company_data.map((company) => company.dba).join(", ")} website
       </p>
       <Accordion
         className="max-w-3xl"
@@ -33,8 +34,9 @@ export default function TermsOfUse() {
               These Terms of Use are a binding agreement between you and{" "}
               <span className="italic">
                 {" "}
-                Lenard Cole CPA Professional Corporation [operating as Cole CPA
-                Group]
+                {company_data.map((company) => company.legal_name).join(", ")}{" "}
+                [operating as{" "}
+                {company_data.map((company) => company.dba).join(", ")}]
               </span>{" "}
               (“the Company”) regarding your access to and use of the Lenard
               Cole CPA Professional Corporation WEBSITE (the “Website”). Each
@@ -431,8 +433,8 @@ export default function TermsOfUse() {
               the Company in its discretion may commence legal proceedings
               against you in the courts of any other jurisdiction seeking
               injunctive relief (or similar urgent legal remedies) to enforce
-              these Terms of Use and protect the Company’s rights in, to and
-              associated with the Website and its content.
+              these Terms of Use and protect the Company&apos;s rights in, to
+              and associated with the Website and its content.
             </p>
           </AccordionContent>
         </AccordionItem>
@@ -474,7 +476,7 @@ export default function TermsOfUse() {
               consecutively and alternatively. You will not assign or transfer
               these Terms of Use or any of your rights and obligations under
               these Terms of Use without the express prior written consent of
-              the Company, which consent may be withheld in the Company’s
+              the Company, which consent may be withheld in the Company&apos;s
               discretion. The Company may, without your consent, assign its
               rights and obligations under these Terms of Use. If any provision
               of these Terms of Use is held by a court or arbitrator of
@@ -514,7 +516,7 @@ export default function TermsOfUse() {
                 “law” includes common law, equity, statutes and regulations; and
               </li>
               <li className="my-5 list-decimal font-normal text-sm">
-                “discretion” mean a person’s sole, absolute and unfettered
+                “discretion” mean a person&apos;s sole, absolute and unfettered
                 discretion.
               </li>
             </ul>
@@ -534,14 +536,15 @@ export default function TermsOfUse() {
               have each expressly requested and required that these Terms of Use
               and all related notices and other documents be drawn up in the
               English language. Les parties conviennent et exigent expressément
-              que ce Contrat et tous les documents qui s’y rapportent soient
-              rédigés en anglais. Subject to applicable law, any non-English
-              translation of these Terms of Use provided by the Company is for
-              convenience only, and if there is a conflict or inconsistency
-              between the English version and a non-English version then the
-              English version of these Terms of Use will take priority and
-              govern. If you have any questions or comments regarding these
-              Terms of Use, please contact the Company’s customer care at
+              que ce Contrat et tous les documents qui s&apos;y rapportent
+              soient rédigés en anglais. Subject to applicable law, any
+              non-English translation of these Terms of Use provided by the
+              Company is for convenience only, and if there is a conflict or
+              inconsistency between the English version and a non-English
+              version then the English version of these Terms of Use will take
+              priority and govern. If you have any questions or comments
+              regarding these Terms of Use, please contact the Company&apos;s
+              customer care at
               <Link href="/contact">Contact Page.</Link>
             </p>
           </AccordionContent>

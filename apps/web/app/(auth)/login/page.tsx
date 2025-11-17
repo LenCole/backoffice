@@ -90,7 +90,7 @@ export default function LoginPage() {
         </Card>
         <FieldDescription className="px-6 text-center">
           By clicking continue, you agree to our{" "}
-          <Link href="/terms-of-service">Terms of Service</Link> and{" "}
+          <Link href="/terms-of-use">Terms of Use</Link> and{" "}
           <Link href="/privacy-policy">Privacy Policy</Link>.
         </FieldDescription>
       </div>
