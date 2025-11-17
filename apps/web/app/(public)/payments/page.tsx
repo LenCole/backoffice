@@ -96,7 +96,7 @@ export default function PaymentsPage() {
           </CardHeader>
           <CardContent>
             <h2>Pay with Visa or Mastercard</h2>
-            <p>at our office or with the invoice sent through Xero</p>
+            <p>At our office or with the invoice sent through Xero</p>
           </CardContent>
           <CardFooter className="flex-col gap-2">
             <Button className="w-full" type="button">
