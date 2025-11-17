@@ -8,5 +8,6 @@ export const company_data = [
     postal: "S7K 3V6",
     email: "support@colecpa.ca",
     phone: "306-715-5516",
+    map_location: "",
   },
 ];
